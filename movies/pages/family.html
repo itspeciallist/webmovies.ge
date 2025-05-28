@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../assets/css/mainstyle.css">
+</head>
+<body>
+<div class="menubox">
+    <div class="logo-area">
+        <img src="../../assets/logo/logo.png" alt="Logo" class="logo">
+        <span class="site-name">webmovies.ge</span>
+    </div>
+
+    <a class="menutext" href="../../index.html">მთავარი</a>
+
+    <!-- Drop-down menu for Movies -->
+    <div class="dropdown">
+    <a class="menutext" href="../../index.html">ფილმები</a>
+    <div class="dropdown-content">
+        <a href="./action.html">მოქმედება</a>
+        <a href="./comedy.html">კომედია</a>
+        <a href="./drama.html">დრამა</a>
+        <a href="./horror.html">ჰორორი</a>
+        <a href="./mystery.html">მისტიკა</a>
+        <a href="./romance.html">რომანტიკა</a>
+        <a href="./thriller.html">თრილერი</a>
+        <a href="./fantasy.html">ფანტასტიკა</a>
+        <a href="./crime.html">კრიმინალი</a>
+        <a href="./documentary.html">დოკუმენტური</a>
+        <a href="./history.html">ისტორიული</a>
+        <a href="./biography.html">ბიოგრაფია</a>
+        <a href="./musical.html">მუსიკალური</a>
+        <a href="./war.html">საომარი</a>
+        <a href="./western.html">ვესტერნი</a>
+        <a href="./family.html">საოჯახო</a>
+        <a href="./sport.html">სპორტი</a>
+    </div>
+</div>
+
+
+    <a class="menutext" href="../../series.html">სერიალები</a>
+    <a class="menutext" href="../../animations.html">ანიმაციები</a> 
+    <a class="menutext" href="../../collections.html">კოლექციები</a>
+
+    <form class="search-form" action="/search" method="get">
+        <input type="text" name="q" placeholder="ძიება...">
+        <button type="submit">🔍</button>
+    </form>
+</div>
+
+<div class="container" id="movie-container">
+
+</div>
+
+<script>
+  const container = document.getElementById('movie-container');
+  const intervalTime = 60000; // 18 seconds
+
+  setInterval(() => {
+    // Move first card to the end to rotate the order
+    const first = container.firstElementChild;
+    container.appendChild(first);
+  }, intervalTime);
+</script>
+
+
+</body>
+</html>
